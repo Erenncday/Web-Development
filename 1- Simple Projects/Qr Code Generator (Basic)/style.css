@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+*
+{
+    padding:0;
+    margin:0;
+    outline: none;
+    border:none;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: orange;
+}
+
+.wrapper
+{
+    background: #fff;
+    max-width: 500px;
+    height: 250px;
+    border-radius: 7px;
+    padding:20px 40px;
+    transition: height .5s ease;
+}
+
+.wrapper.active
+{
+    height: 500px;
+}
+
+header h1
+{
+    font-size: 22px;
+}
+
+header p
+{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #474747;
+}
+
+.wrapper .form
+{
+    margin: 20px 0 30px;
+}
+
+.form :where(input, button)
+{
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.form input
+{
+    font-size: 18px;
+    padding: 0 18px;
+    border: 1px solid orange;
+    color:orange;
+}
+
+.form input::placeholder
+{
+    color: black;
+}
+
+.form button
+{
+    cursor:pointer;
+    margin-top: 20px;
+    background: orange;
+}
+
+.form button:hover
+{  
+    opacity: .9;
+}
+
+.wrapper .qr-code
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid orange;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px;
+}
+
+.wrapper.active .qr-code
+{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s .1s;
+}
